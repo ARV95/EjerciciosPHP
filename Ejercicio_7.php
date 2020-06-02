@@ -34,6 +34,8 @@ function esPar($num) {
     echo "<h3 align='center'><a href='calcularr.html'>Volver al formulario </a></h3>";
     return false;
   }
+  
+  ?>
     
 </body>
 </html>
