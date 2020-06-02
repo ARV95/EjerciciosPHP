@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-form>
+<form>
     Ingrese un numero del 1 al 100:
+    echo "<br>";
     <input name="nombre" type="text" placeholder="Escribe nombres">
-    <input type="submit" value="Registrar">
+    <input type="submit" value="Resultado">
     </form>
 
 <?php
