@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form>
-    Ingrese un numero del 1 al 100:
-   
-    <input name="nombre" type="text" placeholder="ingrese un numero">
-    <input type="submit" value="Resultado">
-    </form>
+
+<h1>Ejercicio 7</h1>
+
+
 
 <?php
-for ($i=1; $i<=100; $i++) {
-    if (primo($i)) {
-        echo "<br>El número ".$i." es primo";
-    } else {
-        echo "<br>El número ".$i." NO es primo";
+$num=0;
+   $num=$_POST["num"];
+   $cont=0;
+    for ($i=1; $i <=$num; $i++) {
+   if ($num % $i==0) {
+ $cont=$cont+1;
+  }
+   }
+
+    if ($cont==2) {
+ echo "el número es primo";
+    echo "<h3 align='center>";
+   }
+   else {
+  echo "el número no es primo";
+ echo"<h3 align='center>";
     }
-}
- 
-/**
-* Función que determina si un numero es primo
-* Tiene que recibir el numero a determinar si es primo o no
-* Devuelve True o False
-*/
-function primo($num)
-{
-    if ($num == 2 || $num == 3 || $num == 5 || $num == 7) {
-        return True;
-    } else {
-        // comprobamos si es par
-        if ($num % 2 != 0) {
-            // comprobamos solo por los impares
-            for ($i = 3; $i <= sqrt($num); $i += 2) {
-                if ($num % $i == 0) {
-                    return False;
-                }
-            }
-            return True;
-        }
+   ?>
+  <br/>
+   <?php
+   if(isset($_POST['num']))  
+   {
+      $num = $_POST['num'];
+   }
+   if($num != null)
+   {
+      if(!esPar($num))
+    {
+
     }
-    return False;
+   }
+   else 
+   {
+       echo "<br>";
+      echo "<h3 align='center'>Debe ingresar un numero </h3>";
+    echo "<h3 align='center'><a href='calcularr.html'>Volver al formulario </a></h3>";
+   }
+
+   function esPar($num)
+   {
+      echo "<h3 align='center'><font color='#C0B840'>";
+     if ($num % 2 == 0)
+      {
+      echo "El numero $num es par"; 
+
+       echo "<a href='calcularr.html'>Volver al formulario";
+       return true;
+     }
+   else
+    {
+      echo "El numero $num es impar";
+
+       echo "<a href='calcularr.html'>Volver al formulario";
+       return false;
+    }
+
+    if (esPrimo($num)) {
+        echo "...";
+    } else {
+        echo "...";
+    }
 }
 ?>
+    
+    
 </body>
-
 </html>
