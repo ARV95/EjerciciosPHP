@@ -3,39 +3,33 @@
 <body>
 
 <h1>Ejercicio 7</h1>
-
-
-
 <?php
-if (isset($_POST['num'])) {
-  $num = $_POST['num'];
-}
- 
-if ($num != null) {
-  if (!esPar($num)) {
-    echo "<h3 align='center'>Ahora toca ver si es primo </h3>";
-  }
-} else {
-  echo "<br>";
-  echo "<h3 align='center'>Debe ingresar un numero </h3>";
-  echo "<h3 align='center'><a href='calcularr.html'>Volver al formulario </a></h3>";
-}
- 
-function esPar($num) {
-  echo "<h3 align='center'><font color='#C0B840'>";
-  if ($num % 2 == 0) {
-    echo "El numero $num es par";
-    echo "</font></h3>";
-    echo "<h3 align='center'><a href='calcularr.html'>Volver al formulario </a></h3>";
-    return true;
-  } else {
-    echo "El numero $num es impar";
-    echo "</font></h3>";
-    echo "<h3 align='center'><a href='calcularr.html'>Volver al formulario </a></h3>";
-    return false;
-  }
-  
+
+
   ?>
-    
+    <form id=»form1″ name=»form1″ method=»post» action=»procesar_primos_sucesivos.php»>
+<table width=»460″ border=»0″>
+<tr>
+<td colspan=»2″><div align=»center»><strong>Ingreso número</strong></div></td>
+</tr>
+<tr>
+<td><strong>Ingrese un número:</strong></td>
+<td><label>
+<input type=»text» name=»numero_primo2″ id=»numero_primo2″ />
+</label></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td colspan=»2″><div align=»center»>
+<label>
+<input type=»submit» name=»ok» id=»ok» value=»Ok» />
+</label>
+</div></td>
+</tr>
+</table>
+</form>
 </body>
 </html>
