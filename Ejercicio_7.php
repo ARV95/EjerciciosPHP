@@ -3,8 +3,8 @@
 <body>
 <form>
     Ingrese un numero del 1 al 100:
-    echo "<br>";
-    <input name="nombre" type="text" placeholder="Escribe nombres">
+   
+    <input name="nombre" type="text" placeholder="ingrese un numero">
     <input type="submit" value="Resultado">
     </form>
 
