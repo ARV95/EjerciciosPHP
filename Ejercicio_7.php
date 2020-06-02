@@ -29,10 +29,7 @@ echo ‘<td width=»180″>’.$j.’ no es primo </td>’;
 echo ‘</tr>’;
 }
 echo ‘<table>’;
-
-
-
-  ?>
+?>
     <form id=»form1″ name=»form1″ method=»post» action=»procesar_primos_sucesivos.php»>
 <table width=»460″ border=»0″>
 <tr>
