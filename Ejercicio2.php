@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>Ejercicios 2</h1>
+<h1>Ejercicio 2</h1>
 
 <?php
 
