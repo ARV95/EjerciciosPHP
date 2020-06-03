@@ -1,71 +1,39 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <body>
 
 <h1>Ejercicio 7</h1>
   
 <?php
-$num=0;
-   $num=$_POST["num"];
-   $cont=0;
-    for ($i=1; $i <=$num; $i++) {
-   if ($num % $i==0) {
- $cont=$cont+1;
-  }
-   }
+function isPrime($num) {
+    //1 is not prime. See: http://en.wikipedia.org/wiki/Prime_number#Primality_of_one
+    if($num == 1)
+        return false;
 
-    if ($cont==2) {
- echo "el número es primo";
-    echo "<h3 align='center>";
-   }
-   else {
-  echo "el número no es primo";
- echo"<h3 align='center>";
-    }
-   ?>
-  <br/>
-   <?php
-   if(isset($_POST['num']))  
-   {
-      $num = $_POST['num'];
-   }
-   if($num != null)
-   {
-      if(!esPar($num))
-    {
+    //2 is prime (the only even number that is prime)
+    if($num == 2)
+        return true;
 
-    }
-   }
-   else 
-   {
-       echo "<br>";
-      echo "<h3 align='center'>Debe ingresar un numero </h3>";
-    echo "<h3 align='center'><a href='calcularr.html'>Volver al formulario </a></h3>";
-   }
-
-   function esPar($num)
-   {
-      echo "<h3 align='center'><font color='#C0B840'>";
-     if ($num % 2 == 0)
-      {
-      echo "El numero $num es par"; 
-
-       echo "<a href='calcularr.html'>Volver al formulario";
-       return true;
-     }
-   else
-    {
-      echo "El numero $num es impar";
-
-       echo "<a href='calcularr.html'>Volver al formulario";
-       return false;
+    /**
+     * if the number is divisible by two, then it's not prime and it's no longer
+     * needed to check other even numbers
+     */
+    if($num % 2 == 0) {
+        return false;
     }
 
-    if (esPrimo($num)) {
-        echo "...";
-    } else {
-        echo "...";
+    /**
+     * Checks the odd numbers. If any of them is a factor, then it returns false.
+     * The sqrt can be an aproximation, hence just for the sake of
+     * security, one rounds it to the next highest integer value.
+     */
+    $ceil = ceil(sqrt($num));
+    for($i = 3; $i <= $ceil; $i = $i + 2) {
+        if($num % $i == 0)
+            return false;
     }
+
+    return true;
 }
 ?>
 </body>
