@@ -5,21 +5,33 @@
 <h1>Ejercicio 7</h1>
   
 <?php
-function getPrimes($finish)
-    {
-        $number = 2;
-        $range = range($number,$finish);
-        $primes = array_combine($range,$range);
-        while($number*$number < $finish){
-            for($i=$number; $i<=$finish; $i+=$number){
-                if($i==$number){
-                    continue;
-                }
-                unset($primes[$i]);
+$n = 11;
+    $o = $_POST["maxprime"];
+    echo 'The script calculated the next primenumbers:</br>';
+    echo '2, 3, 5, 7, ';
+    while (true) { 
+        $t = 6;
+        while (true) { 
+            if ($n % ($t - 1) == 0) {
+                break;
+            } 
+            if ($n % ($t + 1) == 0) {
+                break;
             }
-            $number = next($primes);
+            if ($t > sqrt($n)) {
+                echo("$n,  "); 
+                break;
+            } 
+            $t += 6; 
         }
-        return $primes;
+        if (($n + 1) % 6 == 0) {
+            $n += 2;
+        } else {
+            $n += 4;
+        } 
+        if ($n > $o) {
+            break;
+        }
     }
 ?>
 </body>
