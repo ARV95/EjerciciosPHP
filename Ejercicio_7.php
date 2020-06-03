@@ -12,17 +12,17 @@ if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
 	
 	
     if($_GET['numero']%2!=0){
-        echo "<h2>"."Es un numero primo".$_GET['numero']."</h2>";
+        echo "<h2>"."Es un numero primo"."</h2>";
     }
 
     else{
-        echo "<h2>"."No es un numero primo".$_GET['numero']."</h2>";
+        echo "<h2>"."No es un numero primo"."</h2>";
     }
 
   
 }
 while($_GET['numero']==a){
-	echo "<h2>"."Ingrese un numero entero".$_GET['numero']."</h2>";
+	echo "<h2>"."Ingrese un numero entero"."</h2>";
 }
 
 ?>
