@@ -20,10 +20,6 @@ if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
     else{
         echo "<h2>"."No un numero primo".$_GET['numero']."</h2>";
     }
-while(numero==a ) 
-    {
-echo "<h2>"."Ingrese un numero entero".$_GET['numero']."</h2>";
-}
 
 
 ?>
