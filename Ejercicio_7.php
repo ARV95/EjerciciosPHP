@@ -22,9 +22,6 @@ if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
   
 }
 
-
-	
-}
 	
 ?>
 
