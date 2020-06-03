@@ -3,11 +3,22 @@
 <body>
 
 <h1>Ejercicio 7</h1>
-  
-<form action="Procesa.php" method="post">
- <input type="text" id="campo1" name="campo1" placeholders="Inserta un dato"/>
- <input type="submit" value="Enviar"/>
-</form>  
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Ingrese un numero del 1 al 24: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_POST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+
   
 <?php
  //Prime Function
