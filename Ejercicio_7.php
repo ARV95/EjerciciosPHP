@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1> Ejercicio 7 numeros primos </h1>
+<h1> Ejercicio 7 </h1>
 <?php
 	header ("content-type: text/html;charset=\"utf-8\"");
 
@@ -25,7 +25,7 @@ if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
 
 <form>
 Escribe un numero:
-<input name ="numero" type= "text" placeholder = "Ingrese un cualquier numero">
+<input name ="numero" type= "text" placeholder = "Ingrese un numero">
 
 <input type="submit" value ="Ingresar">
 </form>
