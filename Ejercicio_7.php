@@ -7,6 +7,10 @@
 	header ("content-type: text/html;charset=\"utf-8\"");
 
 echo "<h1>".$_GET['numero']."</h1>";
+	
+	
+	
+	
 
 if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
     if($_GET['numero']%2!=0){
@@ -18,7 +22,7 @@ if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
     }
 while(numero==a ) 
     {
-  echo "Porfavor ingrese un numero entero<br/>";
+echo "<h2>"."Ingrese un numero entero".$_GET['numero']."</h2>";
 }
 
 
