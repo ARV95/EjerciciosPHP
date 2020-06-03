@@ -1,47 +1,34 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <h1>Ejercicio 7</h1>
-   
+
+<h1> Ejercicio 7 numeros primos </h1>
 <?php
-    function isPrime_v2($num) {
-    static $knownPrimes=[3]; // array to save known primes
+	header ("content-type: text/html;charset=\"utf-8\"");
 
-    if($num == 1)
-        return false;
+echo "<h1>".$_GET['numero']."</h1>";
 
-    if($num == 2 || $num == 3) //added '3'
-        return true;
-
-    if($num % 2 == 0)
-        return false;
-
-    $ceil = ceil(sqrt($num)); //same purpose, good point from Farkie
-
-    // Check against known primes to shorten operations
-    // There is no sense to check agains numbers in between
-    foreach($knownPrimesas $prime){
-        if ($prime>$ceil)
-            break;
-        if($num===$prime)
-            return true;
-        if($num % $prime == 0)
-            return false;
+if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
+    if($_GET['numero']%2!=0){
+        echo "<h2>"."Es un numero primo".$_GET['numero']."</h2>";
     }
 
-
-    /**
-     * end($knownPrimes) % 2 !==0 - mathematically guaranteed
-     * start with latest known prime
-     */
-    for($i = end($knownPrimes)+2; $i <= $ceil; $i = $i + 2) {
-        if($num % $i == 0)
-            return false;
+    else{
+        echo "<h2>"."No un numero primo".$_GET['numero']."</h2>";
     }
-    $knownPrimes[]=$num;
-    return true;
+
+  
 }
+
+
 ?>
 
-    </body>
+<form>
+Escribe un numero:
+<input name ="numero" type= "text" placeholder = "Ingrese un cualquier numero">
+
+<input type="submit" value ="Ingresar">
+</form>
+
+</body>
 </html>
