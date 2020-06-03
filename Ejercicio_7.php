@@ -19,7 +19,9 @@ if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
 
   
 }
-
+while(numero==a){
+	echo "<h2>"."Ingrese un numero entero".$_GET['numero']."</h2>";
+}
 
 ?>
 
