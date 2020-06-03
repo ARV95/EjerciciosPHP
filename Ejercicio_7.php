@@ -18,14 +18,14 @@
  }
 
 //Declare integer variable...
-$k = 0;
+$k = 2;
 
 //Start Loop up to any number of your choice for e.g. 200
-while($k < 200) {
+while($k < 25) {
     if(fn_prime($k)) {
-        echo "$k is a prime number<br/>";
+        echo "$k es un numero primo<br/>";
     } else {
-        echo "$k is not a prime number!<br/>";
+        echo "$k no es un numero primo!<br/>";
     }
     $k++;
 }
