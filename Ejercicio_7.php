@@ -2,13 +2,7 @@
 <html>
 <body>
     <h1>Ejercicio 7</h1>
-    <p>Programa que evalua si un numero ingresado es un numero primo.</p>
-    <form action="Numeros.php" method="post">
-        Ingrese un numero: <input type="text1"><br><br>
-        <input type="submit" name="primo">
-    </form>
-
-
+   
 <?php
     if(isset($_POST["primo"])){
         $n=$_POST["text1"];
@@ -32,5 +26,11 @@
 
     }
 ?>
+    <form>
+        Ingrese un numero: <input type="text1"><br><br>
+        <input type="submit" name="primo">
+    </form>
+    
+    
     </body>
 </html>
