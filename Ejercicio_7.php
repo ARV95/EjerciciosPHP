@@ -5,34 +5,30 @@
 <h1>Ejercicio 7</h1>
   
 <?php
-$n = 11;
-    $o = $_POST["maxprime"];
-    echo 'The script calculated the next primenumbers:</br>';
-    echo '2, 3, 5, 7, ';
-    while (true) { 
-        $t = 6;
-        while (true) { 
-            if ($n % ($t - 1) == 0) {
-                break;
-            } 
-            if ($n % ($t + 1) == 0) {
-                break;
-            }
-            if ($t > sqrt($n)) {
-                echo("$n,  "); 
-                break;
-            } 
-            $t += 6; 
+ //Prime Function
+ function fn_prime($number) {
+    $i = 2; $result = TRUE;
+    while($i < $number) {
+        if(!($number%$i)) {
+            $result = FALSE;
         }
-        if (($n + 1) % 6 == 0) {
-            $n += 2;
-        } else {
-            $n += 4;
-        } 
-        if ($n > $o) {
-            break;
-        }
+        $i++;
     }
+    return $result;
+ }
+
+//Declare integer variable...
+$k = 0;
+
+//Start Loop up to any number of your choice for e.g. 200
+while($k < 200) {
+    if(fn_prime($k)) {
+        echo "$k is a prime number<br/>";
+    } else {
+        echo "$k is not a prime number!<br/>";
+    }
+    $k++;
+}
 ?>
 </body>
 </html>
