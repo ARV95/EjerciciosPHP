@@ -42,10 +42,6 @@
     return true;
 }
 ?>
-<form action="Numeros.php" method="post">
-        Ingrese un numero: <input type="text1"><br><br>
-        <input type="submit" name="primo">
-    </form>
-    
+
     </body>
 </html>
