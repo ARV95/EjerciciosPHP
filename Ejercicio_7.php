@@ -4,6 +4,11 @@
 
 <h1>Ejercicio 7</h1>
   
+<form action="Procesa.php" method="post">
+ <input type="text" id="campo1" name="campo1" placeholders="Inserta un dato"/>
+ <input type="submit" value="Enviar"/>
+</form>  
+  
 <?php
  //Prime Function
  function fn_prime($number) {
@@ -18,6 +23,7 @@
  }
 
 //Declare integer variable...
+    
 $k = 2;
 
 //Start Loop up to any number of your choice for e.g. 200
