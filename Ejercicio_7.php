@@ -27,7 +27,7 @@ if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
 
 <form>
 Introduzca un numero:
-<input name ="numero" type= "number" placeholder = "Introduzca un numero">
+<input name ="numero" type= "number>1" placeholder = "Introduzca un numero">
 
 <input type="submit" value ="Ingresar">
 </form>
